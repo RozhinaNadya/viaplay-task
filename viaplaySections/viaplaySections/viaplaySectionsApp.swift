@@ -2,7 +2,7 @@
 //  viaplaySectionsApp.swift
 //  viaplaySections
 //
-//  Created by admin on 2023-02-11.
+//  Created by Nadya Rozhina on 2023-02-11.
 //
 
 import SwiftUI
