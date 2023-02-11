@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ViaplaySectionsView: View {
+    @EnvironmentObject var viewModel: ViaplaySectionsViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
+                    ForEach(sections) { section in
+                        Text(section.title)
+                    }
+                }
+            }
+            .padding()
         }
-        .padding()
+        .onAppear {
+            viewModel.getSectionsTitles()
+        }
     }
 }
 
