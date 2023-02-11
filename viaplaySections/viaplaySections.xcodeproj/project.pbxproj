@@ -12,7 +12,7 @@
 		8480000E2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480000D2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift */; };
 		8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */; };
 		8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */; };
-		8480FFF22997EF9B00BE05A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFF12997EF9B00BE05A0 /* ContentView.swift */; };
+		8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */; };
 		8480FFF42997EF9C00BE05A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8480FFF32997EF9C00BE05A0 /* Assets.xcassets */; };
 		8480FFF82997EF9C00BE05A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8480FFF72997EF9C00BE05A0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,7 @@
 		8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsViewModel.swift; sourceTree = "<group>"; };
 		8480FFEC2997EF9B00BE05A0 /* viaplaySections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaplaySections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsApp.swift; sourceTree = "<group>"; };
-		8480FFF12997EF9B00BE05A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsView.swift; sourceTree = "<group>"; };
 		8480FFF32997EF9C00BE05A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8480FFF52997EF9C00BE05A0 /* viaplaySections.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = viaplaySections.entitlements; sourceTree = "<group>"; };
 		8480FFF72997EF9C00BE05A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */,
+				8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */,
 			);
 			path = ViaplaySections;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 			children = (
 				8480001A2997F01400BE05A0 /* ViaplaySections */,
 				8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */,
-				8480FFF12997EF9B00BE05A0 /* ContentView.swift */,
 				8480FFF32997EF9C00BE05A0 /* Assets.xcassets */,
 				8480FFF52997EF9C00BE05A0 /* viaplaySections.entitlements */,
 				8480FFF62997EF9C00BE05A0 /* Preview Content */,
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */,
-				8480FFF22997EF9B00BE05A0 /* ContentView.swift in Sources */,
+				8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */,
 				8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

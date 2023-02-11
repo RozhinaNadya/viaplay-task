@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct viaplaySectionsApp: App {
+    var viaplaySectionsViewModel = ViaplaySectionsViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ViaplaySectionsView()
+                .environmentObject(viaplaySectionsViewModel)
         }
     }
 }
