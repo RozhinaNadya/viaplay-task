@@ -12,10 +12,13 @@ struct ViaplaySectionsView: View {
 
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Select a category")
+                    .font(.largeTitle)
+                    .padding(.vertical, 8)
                 if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
                     ForEach(sections) { section in
-                        Text(section.title)
+                        sectionRectangle(title: section.title)
                     }
                 }
             }
@@ -24,6 +27,24 @@ struct ViaplaySectionsView: View {
         .onAppear {
             viewModel.getSectionsTitles()
         }
+    }
+
+    @ViewBuilder
+    func sectionRectangle(title: String) -> some View {
+        VStack {
+            Text(title)
+                .foregroundColor(.white)
+                .font(.title)
+        }
+        .frame(height: 100)
+        .frame(maxWidth: .infinity)
+        .mask(
+            RoundedRectangle(cornerRadius: 10)
+        )
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+            .foregroundColor(.accentColor)
+        )
     }
 }
 
