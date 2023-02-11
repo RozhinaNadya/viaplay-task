@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ViaplaySectionsTitles: Decodable {
+public struct ViaplaySections: Decodable {
     public var links: ViaplaySections
 
     enum CodingKeys: String, CodingKey {
@@ -24,17 +24,16 @@ public struct ViaplaySectionsTitles: Decodable {
         public struct Section: Decodable, Identifiable {
             public var id: String
             public var title: String
-
-            enum CodingKeys: String, CodingKey {
-                case id
-                case title
-            }
+            public var href: String
+            public var type: String
+            public var name: String
+            public var templated: Bool
         }
     }
 }
 
 class ViaplaySectionsViewModel: ObservableObject {
-    @Published var viaplaySectionsTitles: ViaplaySectionsTitles?
+    @Published var viaplaySectionsTitles: ViaplaySections?
 
     func getSectionsTitles() {
         guard let url = URL(string: "https://content.viaplay.com/ios-se") else { fatalError("Someting wrong with URL") }
@@ -53,7 +52,7 @@ class ViaplaySectionsViewModel: ObservableObject {
                 guard let data = data else { return }
                 DispatchQueue.main.async {
                     do {
-                        let decodedViaplayContent = try JSONDecoder().decode(ViaplaySectionsTitles.self, from: data)
+                        let decodedViaplayContent = try JSONDecoder().decode(ViaplaySections.self, from: data)
                         self.viaplaySectionsTitles = decodedViaplayContent
                     } catch let error {
                         print("Error decoding: ", error)
