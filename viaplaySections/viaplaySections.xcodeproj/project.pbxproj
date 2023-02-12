@@ -11,6 +11,7 @@
 		8480000C2997EF9C00BE05A0 /* viaplaySectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480000B2997EF9C00BE05A0 /* viaplaySectionsUITests.swift */; };
 		8480000E2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480000D2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift */; };
 		8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */; };
+		848000232999868500BE05A0 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848000222999868500BE05A0 /* NetworkMonitor.swift */; };
 		8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */; };
 		8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */; };
 		8480FFF42997EF9C00BE05A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8480FFF32997EF9C00BE05A0 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		8480000B2997EF9C00BE05A0 /* viaplaySectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsUITests.swift; sourceTree = "<group>"; };
 		8480000D2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsViewModel.swift; sourceTree = "<group>"; };
+		848000222999868500BE05A0 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		8480FFEC2997EF9B00BE05A0 /* viaplaySections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaplaySections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsApp.swift; sourceTree = "<group>"; };
 		8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = ViaplaySections;
 			sourceTree = "<group>";
 		};
+		8480001F29980BDB00BE05A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				848000222999868500BE05A0 /* NetworkMonitor.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8480FFE32997EF9B00BE05A0 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		8480FFEE2997EF9B00BE05A0 /* viaplaySections */ = {
 			isa = PBXGroup;
 			children = (
+				8480001F29980BDB00BE05A0 /* Common */,
 				8480001A2997F01400BE05A0 /* ViaplaySections */,
 				8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */,
 				8480FFF32997EF9C00BE05A0 /* Assets.xcassets */,
@@ -281,6 +292,7 @@
 			files = (
 				8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */,
 				8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */,
+				848000232999868500BE05A0 /* NetworkMonitor.swift in Sources */,
 				8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,8 @@ struct ViaplaySectionsView: View {
                     ForEach(sections) { section in
                         sectionRectangle(title: section.title)
                     }
+                } else {
+                    ProgressView()
                 }
             }
             .padding()

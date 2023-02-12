@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public struct ViaplaySections: Decodable {
     public var links: ViaplaySections
@@ -33,12 +34,19 @@ public struct ViaplaySections: Decodable {
 }
 
 class ViaplaySectionsViewModel: ObservableObject {
+    @ObservedObject public var networkMonitor = NetworkMonitor.shared
+
     @Published var viaplaySectionsTitles: ViaplaySections?
 
     func getSectionsTitles() {
         guard let url = URL(string: "https://content.viaplay.com/ios-se") else { fatalError("Someting wrong with URL") }
 
-        let urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
+
+        // Load from the cache
+        if !networkMonitor.isConnected {
+            urlRequest.cachePolicy = .returnCacheDataDontLoad
+        }
 
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
