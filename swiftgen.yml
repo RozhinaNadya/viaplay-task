@@ -20,10 +20,10 @@
        output: Images/Image.swift
        params:
           enumName: Images
-#   inputs:
-#    - Colors/Colors.xcassets
-#   outputs:
-#     - templateName: swift5
-#       output: Colors/Color.swift
-#       params:
-#          enumName: Colors
+   inputs:
+    - Colors/Colors.xcassets
+   outputs:
+     - templateName: swift5
+       output: Colors/Color.swift
+       params:
+          enumName: Colors

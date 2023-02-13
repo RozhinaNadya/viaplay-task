@@ -14,7 +14,7 @@ internal enum L10n {
     /// Localizable.strings
     ///   viaplaySections
     /// 
-    ///   Created by admin on 2023-02-13.
+    ///   Created by Nadya Rozhina on 2023-02-13.
     internal static let title = L10n.tr("Localizable", "viaplaySections.title", fallback: "Select a category")
   }
 }

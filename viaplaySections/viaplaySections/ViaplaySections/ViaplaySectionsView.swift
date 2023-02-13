@@ -12,7 +12,7 @@ struct ViaplaySectionsView: View {
 
     private typealias MyStrings = L10n.ViaplaySections
     private typealias MyImages = Images.Common
-
+    private typealias MyColors = Colors.Common
 
     var body: some View {
         ScrollView {
@@ -23,6 +23,7 @@ struct ViaplaySectionsView: View {
 
                 Group {
                     Text(MyStrings.title)
+                        .foregroundColor(.white)
                         .font(.largeTitle)
                         .padding(.vertical, 8)
                     if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
@@ -37,6 +38,7 @@ struct ViaplaySectionsView: View {
             }
             .frame(maxWidth: .infinity)
         }
+        .background(MyColors.background.justColor)
         .onAppear {
             viewModel.getSectionsTitles()
         }
