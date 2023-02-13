@@ -31,14 +31,30 @@ struct ViaplaySectionsView: View {
                             sectionRectangle(title: section.title)
                         }
                     } else {
-                        ProgressView()
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+                            Spacer()
+                        }
+                        .padding(.top, 16)
                     }
                 }
                 .padding(.horizontal, 16)
             }
             .frame(maxWidth: .infinity)
         }
-        .background(MyColors.background.justColor)
+        .background(
+            LinearGradient(
+                gradient: .init(
+                    colors: [
+                        MyColors.backgroundLight.justColor,
+                        MyColors.backgroungDark.justColor
+                    ]
+                ),
+                startPoint: .leading,
+                endPoint: .trailing
+            ))
         .onAppear {
             viewModel.getSectionsTitles()
         }
