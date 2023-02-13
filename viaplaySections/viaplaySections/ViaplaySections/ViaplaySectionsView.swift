@@ -10,22 +10,32 @@ import SwiftUI
 struct ViaplaySectionsView: View {
     @EnvironmentObject var viewModel: ViaplaySectionsViewModel
 
+    private typealias MyStrings = L10n.ViaplaySections
+    private typealias MyImages = Images.Common
+
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Select a category")
-                    .font(.largeTitle)
-                    .padding(.vertical, 8)
-                if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
-                    ForEach(sections) { section in
-                        sectionRectangle(title: section.title)
+                MyImages.banner.justImage
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+
+                Group {
+                    Text(MyStrings.title)
+                        .font(.largeTitle)
+                        .padding(.vertical, 8)
+                    if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
+                        ForEach(sections) { section in
+                            sectionRectangle(title: section.title)
+                        }
+                    } else {
+                        ProgressView()
                     }
-                } else {
-                    ProgressView()
                 }
+                .padding(.horizontal, 16)
             }
             .frame(maxWidth: .infinity)
-            .padding(.horizontal, 16)
         }
         .onAppear {
             viewModel.getSectionsTitles()

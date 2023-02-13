@@ -12,6 +12,13 @@
 		8480000E2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480000D2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift */; };
 		8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */; };
 		8480004C299A9CC100BE05A0 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 8480004B299A9CC100BE05A0 /* Reachability */; };
+		8480005A299ABC1C00BE05A0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84800059299ABC1C00BE05A0 /* String+Extension.swift */; };
+		8480005C299ABD0100BE05A0 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8480005B299ABD0100BE05A0 /* swiftgen.yml */; };
+		8480005F299ABEDA00BE05A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84800061299ABEDA00BE05A0 /* Localizable.strings */; };
+		84800065299AC06600BE05A0 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84800064299AC06600BE05A0 /* Image+Extension.swift */; };
+		84800067299AC08600BE05A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84800066299AC08600BE05A0 /* Images.xcassets */; };
+		8480006B299AC24800BE05A0 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480006A299AC24800BE05A0 /* L10n.swift */; };
+		8480006D299AC26000BE05A0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480006C299AC26000BE05A0 /* Image.swift */; };
 		8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */; };
 		8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */; };
 		8480FFF42997EF9C00BE05A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8480FFF32997EF9C00BE05A0 /* Assets.xcassets */; };
@@ -41,6 +48,14 @@
 		8480000B2997EF9C00BE05A0 /* viaplaySectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsUITests.swift; sourceTree = "<group>"; };
 		8480000D2997EF9C00BE05A0 /* viaplaySectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8480001B2997F02600BE05A0 /* ViaplaySectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsViewModel.swift; sourceTree = "<group>"; };
+		84800059299ABC1C00BE05A0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8480005B299ABD0100BE05A0 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = swiftgen.yml; path = ../../swiftgen.yml; sourceTree = "<group>"; };
+		84800060299ABEDA00BE05A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84800062299ABF4100BE05A0 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84800064299AC06600BE05A0 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		84800066299AC08600BE05A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8480006A299AC24800BE05A0 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		8480006C299AC26000BE05A0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8480FFEC2997EF9B00BE05A0 /* viaplaySections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaplaySections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsApp.swift; sourceTree = "<group>"; };
 		8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsView.swift; sourceTree = "<group>"; };
@@ -102,6 +117,35 @@
 			path = ViaplaySections;
 			sourceTree = "<group>";
 		};
+		84800050299ABB7300BE05A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84800063299AC02A00BE05A0 /* Images */,
+				84800051299ABB9400BE05A0 /* Strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84800051299ABB9400BE05A0 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				8480006A299AC24800BE05A0 /* L10n.swift */,
+				84800059299ABC1C00BE05A0 /* String+Extension.swift */,
+				84800061299ABEDA00BE05A0 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		84800063299AC02A00BE05A0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84800064299AC06600BE05A0 /* Image+Extension.swift */,
+				8480006C299AC26000BE05A0 /* Image.swift */,
+				84800066299AC08600BE05A0 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8480FFE32997EF9B00BE05A0 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +169,8 @@
 		8480FFEE2997EF9B00BE05A0 /* viaplaySections */ = {
 			isa = PBXGroup;
 			children = (
+				8480005B299ABD0100BE05A0 /* swiftgen.yml */,
+				84800050299ABB7300BE05A0 /* Resources */,
 				8480001A2997F01400BE05A0 /* ViaplaySections */,
 				8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */,
 				8480FFF32997EF9C00BE05A0 /* Assets.xcassets */,
@@ -231,6 +277,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 8480FFE32997EF9B00BE05A0;
 			packageReferences = (
@@ -260,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8480FFF82997EF9C00BE05A0 /* Preview Assets.xcassets in Resources */,
+				84800067299AC08600BE05A0 /* Images.xcassets in Resources */,
+				8480005F299ABEDA00BE05A0 /* Localizable.strings in Resources */,
 				8480FFF42997EF9C00BE05A0 /* Assets.xcassets in Resources */,
+				8480005C299ABD0100BE05A0 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8480006D299AC26000BE05A0 /* Image.swift in Sources */,
 				8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */,
 				8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */,
+				8480006B299AC24800BE05A0 /* L10n.swift in Sources */,
+				8480005A299ABC1C00BE05A0 /* String+Extension.swift in Sources */,
 				8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */,
+				84800065299AC06600BE05A0 /* Image+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +370,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		84800061299ABEDA00BE05A0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84800060299ABEDA00BE05A0 /* en */,
+				84800062299ABF4100BE05A0 /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		8480000F2997EF9C00BE05A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -379,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
