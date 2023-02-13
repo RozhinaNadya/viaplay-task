@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Reachability
 
 public struct ViaplaySections: Decodable {
     public var links: ViaplaySections
@@ -34,18 +35,32 @@ public struct ViaplaySections: Decodable {
 }
 
 class ViaplaySectionsViewModel: ObservableObject {
-    @ObservedObject public var networkMonitor = NetworkMonitor.shared
 
     @Published var viaplaySectionsTitles: ViaplaySections?
 
-    func getSectionsTitles() {
+    public var hasConnectivity: Bool {
+        do {
+            let reachability: Reachability = try Reachability()
+
+            switch reachability.connection {
+            case .unavailable:
+                return false
+            case .wifi, .cellular:
+                return true
+            }
+        } catch {
+            return true
+        }
+    }
+
+    public func getSectionsTitles() {
         guard let url = URL(string: "https://content.viaplay.com/ios-se") else { fatalError("Someting wrong with URL") }
 
         var urlRequest = URLRequest(url: url)
 
         // Load from the cache
-        if !networkMonitor.isConnected {
-            urlRequest.cachePolicy = .returnCacheDataDontLoad
+        if !hasConnectivity  {
+            urlRequest.cachePolicy = .returnCacheDataElseLoad
         }
 
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
@@ -55,20 +70,22 @@ class ViaplaySectionsViewModel: ObservableObject {
             }
 
             guard let response = response as? HTTPURLResponse else { return }
+            self.decodeSectionsTitlesJson(response: response, data: data)
+        }
+        dataTask.resume()
+    }
 
-            if response.statusCode == 200 {
-                guard let data = data else { return }
-                DispatchQueue.main.async {
-                    do {
-                        let decodedViaplayContent = try JSONDecoder().decode(ViaplaySections.self, from: data)
-                        self.viaplaySectionsTitles = decodedViaplayContent
-                    } catch let error {
-                        print("Error decoding: ", error)
-                    }
+    private func decodeSectionsTitlesJson(response: HTTPURLResponse, data: Data?) {
+        if response.statusCode == 200 {
+            guard let data = data else { return }
+            DispatchQueue.main.sync {
+                do {
+                    let decodedViaplayContent = try JSONDecoder().decode(ViaplaySections.self, from: data)
+                    self.viaplaySectionsTitles = decodedViaplayContent
+                } catch let error {
+                    print("Error decoding: ", error)
                 }
             }
         }
-
-        dataTask.resume()
     }
 }

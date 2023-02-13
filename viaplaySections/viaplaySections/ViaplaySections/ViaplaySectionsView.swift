@@ -24,7 +24,8 @@ struct ViaplaySectionsView: View {
                     ProgressView()
                 }
             }
-            .padding()
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 16)
         }
         .onAppear {
             viewModel.getSectionsTitles()
