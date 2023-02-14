@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+private typealias MyStrings = L10n.ViaplaySections
+private typealias MyImages = Images.Common
+private typealias MyColors = Colors.Common
+
 struct ViaplaySectionsView: View {
     @EnvironmentObject var viewModel: ViaplaySectionsViewModel
-
-    private typealias MyStrings = L10n.ViaplaySections
-    private typealias MyImages = Images.Common
-    private typealias MyColors = Colors.Common
 
     var body: some View {
         ScrollView {
@@ -27,7 +27,7 @@ struct ViaplaySectionsView: View {
                         .font(.largeTitle)
                         .padding(.vertical, 8)
                     if let sections = viewModel.viaplaySectionsModel?.links.viaplaySections {
-                        ForEach(sections) { section in
+                        ForEach(sections, id: \.self.id) { section in
                             sectionRectangle(title: section.title)
                         }
                     } else {
@@ -44,17 +44,7 @@ struct ViaplaySectionsView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .background(
-            LinearGradient(
-                gradient: .init(
-                    colors: [
-                        MyColors.backgroundLight.justColor,
-                        MyColors.backgroungDark.justColor
-                    ]
-                ),
-                startPoint: .leading,
-                endPoint: .trailing
-            ))
+        .background(LinearGradient.background)
         .onAppear {
             viewModel.getSectionsTitles()
         }
@@ -77,6 +67,19 @@ struct ViaplaySectionsView: View {
             .foregroundColor(.accentColor)
         )
     }
+}
+
+private extension LinearGradient {
+    static let background = LinearGradient(
+        gradient: .init(
+            colors: [
+                MyColors.backgroundLight.justColor,
+                MyColors.backgroungDark.justColor
+            ]
+        ),
+        startPoint: .leading,
+        endPoint: .trailing
+    )
 }
 
 struct ViaplaySectionsView_Previews: PreviewProvider {
