@@ -9,34 +9,9 @@ import Foundation
 import SwiftUI
 import Reachability
 
-public struct ViaplaySections: Decodable {
-    public var links: ViaplaySections
-
-    enum CodingKeys: String, CodingKey {
-        case links = "_links"
-    }
-
-    public struct ViaplaySections: Decodable {
-        public var viaplaySections: [Section]
-
-        enum CodingKeys: String, CodingKey {
-            case viaplaySections = "viaplay:sections"
-        }
-
-        public struct Section: Decodable, Identifiable {
-            public var id: String
-            public var title: String
-            public var href: String
-            public var type: String
-            public var name: String
-            public var templated: Bool
-        }
-    }
-}
-
 class ViaplaySectionsViewModel: ObservableObject {
 
-    @Published var viaplaySectionsTitles: ViaplaySections?
+    @Published var viaplaySectionsTitles: ViaplaySectionsModel?
 
     public var hasConnectivity: Bool {
         do {
@@ -80,7 +55,7 @@ class ViaplaySectionsViewModel: ObservableObject {
             guard let data = data else { return }
             DispatchQueue.main.sync {
                 do {
-                    let decodedViaplayContent = try JSONDecoder().decode(ViaplaySections.self, from: data)
+                    let decodedViaplayContent = try JSONDecoder().decode(ViaplaySectionsModel.self, from: data)
                     self.viaplaySectionsTitles = decodedViaplayContent
                 } catch let error {
                     print("Error decoding: ", error)
