@@ -24,7 +24,6 @@ struct ViaplaySectionsModel: Decodable {
         struct Section: Decodable, Identifiable {
             var id: String
             var title: String
-
         }
     }
 }
