@@ -26,7 +26,7 @@ struct ViaplaySectionsView: View {
                         .foregroundColor(.white)
                         .font(.largeTitle)
                         .padding(.vertical, 8)
-                    if let sections = viewModel.viaplaySectionsTitles?.links.viaplaySections {
+                    if let sections = viewModel.viaplaySectionsModel?.links.viaplaySections {
                         ForEach(sections) { section in
                             sectionRectangle(title: section.title)
                         }

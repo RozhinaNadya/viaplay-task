@@ -23,6 +23,8 @@
 		84800072299AC84B00BE05A0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84800071299AC84B00BE05A0 /* Color+Extension.swift */; };
 		84800074299AC9E700BE05A0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84800073299AC9E700BE05A0 /* Color.swift */; };
 		8480007C299BE0F600BE05A0 /* ViaplaySectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480007B299BE0F600BE05A0 /* ViaplaySectionsModel.swift */; };
+		8480007F299BE25B00BE05A0 /* ViaplaySectionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480007E299BE25B00BE05A0 /* ViaplaySectionsManager.swift */; };
+		84800081299BE34600BE05A0 /* NetworkReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84800080299BE34600BE05A0 /* NetworkReachabilityService.swift */; };
 		8480FFF02997EF9B00BE05A0 /* viaplaySectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */; };
 		8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */; };
 		8480FFF42997EF9C00BE05A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8480FFF32997EF9C00BE05A0 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		84800071299AC84B00BE05A0 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		84800073299AC9E700BE05A0 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8480007B299BE0F600BE05A0 /* ViaplaySectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsModel.swift; sourceTree = "<group>"; };
+		8480007E299BE25B00BE05A0 /* ViaplaySectionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsManager.swift; sourceTree = "<group>"; };
+		84800080299BE34600BE05A0 /* NetworkReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityService.swift; sourceTree = "<group>"; };
 		8480FFEC2997EF9B00BE05A0 /* viaplaySections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaplaySections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8480FFEF2997EF9B00BE05A0 /* viaplaySectionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viaplaySectionsApp.swift; sourceTree = "<group>"; };
 		8480FFF12997EF9B00BE05A0 /* ViaplaySectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplaySectionsView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8480007D299BE23300BE05A0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8480007E299BE25B00BE05A0 /* ViaplaySectionsManager.swift */,
+				84800080299BE34600BE05A0 /* NetworkReachabilityService.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		8480FFE32997EF9B00BE05A0 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		8480FFEE2997EF9B00BE05A0 /* viaplaySections */ = {
 			isa = PBXGroup;
 			children = (
+				8480007D299BE23300BE05A0 /* Sources */,
 				8480007A299BE0CF00BE05A0 /* Models */,
 				8480005B299ABD0100BE05A0 /* swiftgen.yml */,
 				84800050299ABB7300BE05A0 /* Resources */,
@@ -368,6 +382,7 @@
 			files = (
 				8480006D299AC26000BE05A0 /* Image.swift in Sources */,
 				8480001C2997F02600BE05A0 /* ViaplaySectionsViewModel.swift in Sources */,
+				84800081299BE34600BE05A0 /* NetworkReachabilityService.swift in Sources */,
 				8480007C299BE0F600BE05A0 /* ViaplaySectionsModel.swift in Sources */,
 				8480FFF22997EF9B00BE05A0 /* ViaplaySectionsView.swift in Sources */,
 				8480006B299AC24800BE05A0 /* L10n.swift in Sources */,
@@ -376,6 +391,7 @@
 				84800065299AC06600BE05A0 /* Image+Extension.swift in Sources */,
 				84800072299AC84B00BE05A0 /* Color+Extension.swift in Sources */,
 				84800074299AC9E700BE05A0 /* Color.swift in Sources */,
+				8480007F299BE25B00BE05A0 /* ViaplaySectionsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
