@@ -13,10 +13,6 @@ class ViaplaySectionsViewModel: ObservableObject {
     @Published var viaplaySectionsModel: ViaplaySectionsModel?
 
     private var cancellable: AnyCancellable?
-
-    var links: [ViaplaySectionsModel.ViaplaySections.Section]? {
-        viaplaySectionsModel?.links.viaplaySections
-    }
     
     func getSectionsTitles() {
         self.cancellable = ViaplaySectionsManager.shared.getSectionsTitles()
